@@ -1,0 +1,71 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/dohoonkwon0-droid/dohoon/blob/main/20230522%20%EA%B6%8C%EB%8F%84%ED%9B%88%202%EC%A3%BC%EC%B0%A8%20%EA%B3%BC%EC%A0%9C\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "# df = pd.read_csv(\"member.csv\")\n",
+        "df=\n",
+        "pd.read_csv(\"https://raw.githubusercontent.com/lovedlim/bigdata_analyst_cert/main/part4/ch2/member.csv\")\n",
+        "\n",
+        "line = int(len(df)*0.8)\n",
+        "df = df.iloc[:line]\n",
+        "\n",
+        "std1 = df['f1'].std()\n",
+        "\n",
+        "med=df['f1'].median()\n",
+        "df['f1'] = df['f1'].fillna(med)\n",
+        "\n",
+        "std2 = df['f1'].std()\n",
+        "\n",
+        "result = abs(std1-std2)\n",
+        "\n",
+        "print(round(result,2))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 110
+        },
+        "id": "mGmL_lk0kZye",
+        "outputId": "c8d3ca72-8202-437a-a3f2-fe2735f57e83"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "invalid syntax (2810163179.py, line 4)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipykernel_515/2810163179.py\"\u001b[0;36m, line \u001b[0;32m4\u001b[0m\n\u001b[0;31m    df=\u001b[0m\n\u001b[0m        ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Colab 시작하기",
+      "toc_visible": true,
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
