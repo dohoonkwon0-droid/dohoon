@@ -1,0 +1,35 @@
+@startuml
+left to right direction
+skinparam actorStyle stickman
+skinparam packageStyle rectangle
+
+actor "학생" as Student
+actor "강사" as Instructor
+actor "학사지원원" as Academic
+
+rectangle "수강신청 시스템" {
+  usecase "강좌열람" as UC1
+  usecase "수강신청" as UC2
+  usecase "수강변경" as UC3
+  usecase "시간표출력" as UC4
+
+  usecase "담당강의선정" as UC5
+  usecase "출석부 출력" as UC6
+
+  usecase "강좌입력" as UC7
+  usecase "강좌변경" as UC8
+  usecase "강의 리스트 출력" as UC9
+}
+
+Student -- UC1
+Student -- UC2
+Student -- UC3
+Student -- UC4
+
+Instructor -- UC5
+Instructor -- UC6
+
+Academic -- UC7
+Academic -- UC8
+Academic -- UC9
+@enduml
